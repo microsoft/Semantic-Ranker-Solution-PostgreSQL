@@ -1,0 +1,10 @@
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip=23.0.1
+  - pip:
+      - transformers==4.44.2
+      - torch==2.4.1
+      - azureml-inference-server-http
+name: model-env

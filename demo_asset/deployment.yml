@@ -1,0 +1,13 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+name: mydeployment
+endpoint_name: my-endpoint
+model:
+  path: ./model/
+code_configuration:
+  code: ./scoring/
+  scoring_script: score_bge_aml.py
+environment: 
+  conda_file: ./environment/conda.yml
+  image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04:latest
+instance_type: Standard_DS3_v2
+instance_count: 1
