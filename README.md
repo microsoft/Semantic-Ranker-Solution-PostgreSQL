@@ -10,6 +10,9 @@ In our Solution Accelerator demonstration, we leverage a subset of the CNN-Daily
 ## Before you start
 * You need to have your own Azure subscription
 * Install [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd?tabs=winget-windows%2Cbrew-mac%2Cscript-linux&pivots=os-linux)
+* Install [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+* Install az ml extension using `az extension add --name ml`
+* Ensure enough compute quota is available in the region you want to deploy the solution to. The required quota is 24 CPUs of Standard_NC24ads_A100_v4. ([view & manage quota](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-manage-quotas))
 
 ## Create the demonstration environment
 In this demonstration you will use Bicep files to deploy the required resources. The steps below guides you to deploy the Azure services necessary for completing this demonstration into your Azure subscription.
