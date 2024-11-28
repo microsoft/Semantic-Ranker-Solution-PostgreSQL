@@ -45,7 +45,10 @@ In this demonstration you will use Bicep files to deploy the required resources.
 ## Semantic Reranking in Azure Database for PostgreSQL Flexible Server
 6. Connect to database by providing database host, username, and database name.
     ```bash
-    psql --host=<AZURE_POSTGRES_HOST> --port=5432 --username=<AZURE_POSTGRES_USERNAME> --dbname=<AZURE_POSTGRES_DB_NAME>
+    # load environment variables from azd environment
+    source <(azd env get-values)
+    # connect to PostgreSQL
+    psql --host=$AZURE_POSTGRES_HOST --port=5432 --username=$AZURE_POSTGRES_USERNAME --dbname=$AZURE_POSTGRES_DB_NAME
     ```
     
 7. Create and setup necessary extensions
